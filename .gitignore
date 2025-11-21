@@ -6,9 +6,6 @@ __pycache__/
 *$py.class
 *.so
 .Python
-env/
-venv/
-ENV/
 build/
 develop-eggs/
 dist/
@@ -40,48 +37,45 @@ ENV/
 *.swp
 *.swo
 *~
-.DS_Store
 .project
 .pydevproject
 .settings/
-
-# Data (optional - uncomment if needed)
-# data/train/
-# data/val/
-
-# Models (large files - optional)
-# models/plant_disease.h5
-# models/*.h5
 
 # Streamlit
 .streamlit/
 .streamlit/secrets.toml
 
+# Cache and logs
+*.log
+.cache/
+.tmp/
+*.cache
+*.pkl
+*.pickle
+logs/
+
+# OS files
+Thumbs.db
+.DS_Store
+.directory
+
+# Node/Frontend (ignore entire frontend folder)
+frontend/
+node_modules/
+npm-debug.log
+
 # Environment variables
 .env
 .env.local
 .env.*.local
-.frontend
-# OS
-.DS_Store
-Thumbs.db
-.directory
-
-# Logs
-*.log
-logs/
-
-# Cache
-*.cache
-*.pkl
-*.pickle
-__pycache__
+*.pem
+*.key
 
 # Temporary files
-*.tmp
-*.temp
 *.bak
 *.backup
+*.temp
+~*
 
 # Jupyter
 .ipynb_checkpoints/
@@ -92,7 +86,17 @@ __pycache__
 .coverage
 htmlcov/
 
-# Media (if desired)
+# Large data files (keep only for training reference)
+data/train_split/
+data/val_split/
+
+# Media files (optional)
 *.mp4
 *.mov
 *.avi
+
+# Keep model and labels for deployment
+!models/
+!models/plant_disease.h5
+!models/history.json
+!labels.json
