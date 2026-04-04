@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './App.css';
+import Footer from './Footer';
 
 function App() {
   const [uploadedFile, setUploadedFile] = useState(null);
@@ -249,9 +250,7 @@ function App() {
         </div>
       </div>
 
-      <footer className="footer">
-        <p>🌾 Plant Disease Detection v2.0 | Powered by React & TensorFlow</p>
-      </footer>
+      <Footer />
     </div>
   );
 }

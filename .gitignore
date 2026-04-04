@@ -86,17 +86,19 @@ npm-debug.log
 .coverage
 htmlcov/
 
-# Large data files (keep only for training reference)
+# Large data files (exclude - too large for GitHub)
+data/train/
+data/val/
 data/train_split/
 data/val_split/
+*.h5
 
 # Media files (optional)
 *.mp4
 *.mov
 *.avi
 
-# Keep model and labels for deployment
-!models/
-!models/plant_disease.h5
-!models/history.json
+# Keep labels and history for deployment (model too large - use Git LFS or upload separately)
 !labels.json
+!models/history.json
+# models/plant_disease.h5 - Use Git LFS for this large file or upload to cloud storage
